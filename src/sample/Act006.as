@@ -4,9 +4,10 @@ package sample
 	import flash.events.Event;
 	import flash.text.TextField;
 	
-	public class Act001 extends Sprite
+	public class Act006 extends Sprite
 	{
-		public function Act001()
+		
+		public function Act006()
 		{
 			super();
 			addEventListener(Event.ADDED_TO_STAGE,initalize);
@@ -15,13 +16,17 @@ package sample
 		private function initalize(event:Event):void
 		{
 			removeEventListener(Event.ADDED_TO_STAGE,initalize);
-			showText();
+			showTime();
 		}
-		
-		private function showText():void
+
+		private function showTime():void
 		{
+			
+			var date:Date = new Date();
+			var timeText:String = date.hours + ':' + date.minutes + ':' + date.seconds;
+			
 			var text:TextField = new TextField();
-			text.text = 'MAKOTO OHNAMI';
+			text.text = timeText;
 			text.width = 200;
 			text.x = (stage.stageWidth - text.width) / 2;
 			text.y = (stage.stageHeight - text.height) / 2;

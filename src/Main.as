@@ -4,8 +4,10 @@ package
 	import flash.display.StageAlign;
 	import flash.display.StageScaleMode;
 	
-	import sample.Act001;
-	
+	import sample.*;
+	import work.*;
+
+	[SWF(backgroundColor="#FFFFFF", width="360", height="640", frameRate="60")]
 	public class Main extends Sprite
 	{
 		public function Main()
@@ -16,9 +18,9 @@ package
 			stage.align = StageAlign.TOP_LEFT;
 			stage.scaleMode = StageScaleMode.NO_SCALE;
 			
-			var act:sample.Act001 = new sample.Act001();
+			var act:sample.Act007 = new sample.Act007();
 			addChild(act);
-			
+
 		}
 	}
 }
