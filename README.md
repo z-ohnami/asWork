@@ -71,6 +71,8 @@ http://www.drk7.jp/weather/
 
 3日目
 フレームワークを使う(Starling,Feather)
+Starlingを使って Act001をやってみましょう。
+
 アニメをStarlingに移植する
 ボタン
 リスト
