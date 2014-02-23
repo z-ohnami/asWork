@@ -18,7 +18,7 @@ package
 			stage.align = StageAlign.TOP_LEFT;
 			stage.scaleMode = StageScaleMode.NO_SCALE;
 			
-			var act:sample.Act007 = new sample.Act007();
+			var act:sample.Act011 = new sample.Act011();
 			addChild(act);
 
 		}
