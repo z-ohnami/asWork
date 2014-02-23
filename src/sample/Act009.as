@@ -1,6 +1,5 @@
 package sample
 {
-	import flash.display.Shape;
 	import flash.display.Sprite;
 	import flash.events.Event;
 	import flash.events.MouseEvent;
