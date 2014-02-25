@@ -1,0 +1,8 @@
+<TextureAtlas imagePath="character_sample.png">
+  <SubTexture name="character1" x="0"   y="0"   width="162" height="220"/>
+  <SubTexture name="character2" x="162" y="0"   width="162" height="220"/>
+  <SubTexture name="character3" x="324" y="0"   width="162" height="220"/>
+  <SubTexture name="character4" x="0"   y="220" width="162" height="220"/>
+  <SubTexture name="character5" x="162" y="220" width="162" height="220"/>
+  <SubTexture name="character6" x="324" y="220" width="162" height="220"/>
+</TextureAtlas>
