@@ -24,8 +24,8 @@ package
 			stage.align = StageAlign.TOP_LEFT;
 			stage.scaleMode = StageScaleMode.NO_SCALE;
 
-//			run(sample.Act018,APPLICATION_TYPE_NORMAL);
-			run(sample.Act405,APPLICATION_TYPE_STARLING);
+//			run(sample.Act010,APPLICATION_TYPE_NORMAL);
+			run(sample.Act407,APPLICATION_TYPE_STARLING);
 
 		}
 		
@@ -35,6 +35,7 @@ package
 				addChild(new className());
 
 			} else if (type == APPLICATION_TYPE_STARLING) {
+				stage.frameRate = 60;
 				_mStarling = new Starling(className, stage);
 				_mStarling.start();
 			}
