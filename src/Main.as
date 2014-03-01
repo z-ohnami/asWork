@@ -3,10 +3,11 @@ package
 	import flash.display.Sprite;
 	import flash.display.StageAlign;
 	import flash.display.StageScaleMode;
-	import starling.core.Starling;
 	
-	import sample.*;
-	import work.*;
+	import sample.Act407;
+	
+	import starling.core.Starling;
+	import flash.geom.Rectangle;
 
 	[SWF(backgroundColor="#FFFFFF", width="360", height="640", frameRate="60")]
 	public class Main extends Sprite
@@ -31,12 +32,25 @@ package
 		
 		private function run(className:Class,type:int = 1):void
 		{
+			stage.frameRate = 60;
+
 			if (type == APPLICATION_TYPE_NORMAL) {
+				//素のFlashの場合はこちら
 				addChild(new className());
 
 			} else if (type == APPLICATION_TYPE_STARLING) {
-				stage.frameRate = 60;
-				_mStarling = new Starling(className, stage);
+				//Starling の場合はこちら
+				
+				Starling.handleLostContext = true; // コンテキストのロストを防ぐ
+
+				//フルスクリーン時の縦横幅を取得
+				var screenWidth:int = stage.fullScreenWidth;
+				var screenHeight:int = stage.fullScreenHeight;
+
+				// ゲーム画面が縦横比を維持しつつ、スクリーンにフィットするようにViewportの縦横幅を算出する
+				var viewport:Rectangle = new Rectangle(0, 0, screenWidth, screenHeight);
+				
+				_mStarling = new Starling(className, stage,viewport);
 				_mStarling.start();
 			}
 		}
