@@ -1,7 +1,6 @@
 package sample
 {
 	import flash.display.Sprite;
-	import flash.events.DataEvent;
 	import flash.events.Event;
 	import flash.events.IOErrorEvent;
 	import flash.net.URLLoader;

@@ -4,7 +4,8 @@ package
 	import flash.display.StageAlign;
 	import flash.display.StageScaleMode;
 	
-	import sample.Act407;
+	import sample.*;
+	import work.*;
 	
 	import starling.core.Starling;
 	import flash.geom.Rectangle;
@@ -25,8 +26,8 @@ package
 			stage.align = StageAlign.TOP_LEFT;
 			stage.scaleMode = StageScaleMode.NO_SCALE;
 
-//			run(sample.Act010,APPLICATION_TYPE_NORMAL);
-			run(sample.Act407,APPLICATION_TYPE_STARLING);
+			run(sample.Act219,APPLICATION_TYPE_NORMAL);
+//			run(sample.Act4,APPLICATION_TYPE_STARLING);
 
 		}
 		
