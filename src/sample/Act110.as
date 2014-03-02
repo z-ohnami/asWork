@@ -14,17 +14,17 @@ package sample
 		public function Act110()
 		{
 			super();
-			addEventListener(Event.ADDED_TO_STAGE, initalize);
+			addEventListener(Event.ADDED_TO_STAGE, init);
 
 			timer = new Timer(2000);
 			timer.addEventListener(TimerEvent.TIMER, onTimer);
 			timer.start();
 		}
 		
-		private function initalize(event:Event):void
+		private function init(event:Event):void
 		{
 			trace('application initialized.');
-			removeEventListener(Event.ADDED_TO_STAGE,initalize);
+			removeEventListener(Event.ADDED_TO_STAGE,init);
 			stage.color = 0x000000;
 			drawRect(0x00FF00);
 		}

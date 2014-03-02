@@ -11,12 +11,12 @@ package sample
 		public function Act103()
 		{
 			super();
-			addEventListener(Event.ADDED_TO_STAGE,initalize);
+			addEventListener(Event.ADDED_TO_STAGE,init);
 		}
 		
-		private function initalize(event:Event):void
+		private function init(event:Event):void
 		{
-			removeEventListener(Event.ADDED_TO_STAGE,initalize);
+			removeEventListener(Event.ADDED_TO_STAGE,init);
 			stage.color = 0x000000;
 			drawCircle();
 			adjustShape();
