@@ -10,7 +10,7 @@ package sample
 	import starling.textures.Texture;
 	import starling.textures.TextureAtlas;
 	
-	public class Act404 extends Sprite 
+	public class Act304 extends Sprite 
 	{
 
 		[Embed(source = '/img/character_sample.png', mimeType='image/png')]
@@ -19,7 +19,7 @@ package sample
 		[Embed(source = '/img/character_sample.xml', mimeType='application/octet-stream')]
 		private static const ImageCharacterXML:Class;
 				
-		public function Act404() 
+		public function Act304() 
 		{
 			super();
 			

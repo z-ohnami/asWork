@@ -6,12 +6,12 @@ package sample
 	import starling.events.Event;
 	import starling.display.Shape;	
 	
-	public class Act402 extends Sprite 
+	public class Act302 extends Sprite 
 	{
 		
 		private var _shape:Sprite;
 		
-		public function Act402() 
+		public function Act302() 
 		{
 			super();
 			

@@ -5,10 +5,10 @@ package sample
 	import starling.text.TextField;
 	
 	
-	public class Act401 extends Sprite 
+	public class Act301 extends Sprite 
 	{
 		
-		public function Act401() 
+		public function Act301() 
 		{
 			super();
 			

@@ -1,23 +1,24 @@
 package sample 
 {
 	
+	
+	import flash.display.Bitmap;
+	
 	import starling.display.Image;
 	import starling.display.Sprite;
 	import starling.events.Event;
 	import starling.textures.Texture;
-	import flash.utils.ByteArray;
 	
-	public class Act405 extends Sprite 
+	public class Act303 extends Sprite 
 	{
 
-		[Embed(source = '/img/hana.atf', mimeType='application/octet-stream')]
+		[Embed(source = '/img/hana.jpg', mimeType='image/jpeg')]
 		private static const ImageHana:Class;
 		
-		[Embed(source = '/img/daruma.atf', mimeType='application/octet-stream')]
+		[Embed(source = '/img/daruma.jpg', mimeType='image/jpeg')]
 		private static const ImageDaruma:Class;
 		
-		
-		public function Act405() 
+		public function Act303() 
 		{
 			super();
 			
@@ -35,14 +36,14 @@ package sample
 
 		private function addImage():void
 		{
-			var bmpHana:ByteArray = new ImageHana();
-			var textureHana:Texture = Texture.fromAtfData(bmpHana);
+			var bmpHana:Bitmap = new ImageHana() as Bitmap;
+			var textureHana:Texture = Texture.fromBitmap(bmpHana);
 			var imageHana:Image = new Image(textureHana);
 			addChild(imageHana);
 
 			
-			var bmpDaruma:ByteArray = new ImageDaruma();
-			var textureDaruma:Texture = Texture.fromAtfData(bmpDaruma);
+			var bmpDaruma:Bitmap = new ImageDaruma() as Bitmap;
+			var textureDaruma:Texture = Texture.fromBitmap(bmpDaruma);
 			var imageDaruma:Image = new Image(textureDaruma);
 			imageDaruma.y = imageHana.height;
 			addChild(imageDaruma);

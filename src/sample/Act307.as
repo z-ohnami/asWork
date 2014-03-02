@@ -7,7 +7,7 @@ package sample
 	import starling.textures.Texture;
 	import flash.utils.ByteArray;
 	
-	public class Act407 extends Sprite 
+	public class Act307 extends Sprite 
 	{
 		
 		[Embed(source = '/img/daruma.atf', mimeType='application/octet-stream')]
@@ -15,7 +15,7 @@ package sample
 		
 		private var _image:RoundImage;
 			
-		public function Act407() 
+		public function Act307() 
 		{
 			super();
 			addEventListener(Event.ADDED_TO_STAGE, init);
