@@ -16,6 +16,7 @@
   <!-- Other classes to be compiled into your SWF -->
   <classpaths>
     <class path="src" />
+    <class path="res" />
   </classpaths>
   <!-- Build options -->
   <build>
@@ -56,6 +57,7 @@
     <element path="lib\starling.swc" />
     <element path="lib\Starling-Extension-Graphics.swc" />
     <element path="lib\Tween24_2.0.1.swc" />
+    <element path="lib\feathers.swc" />
   </libraryPaths>
   <!-- External Libraries -->
   <externalLibraryPaths>

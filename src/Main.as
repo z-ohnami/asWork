@@ -27,7 +27,7 @@ package
 			stage.scaleMode = StageScaleMode.NO_SCALE;
 
 //			run(sample.Act219,APPLICATION_TYPE_NORMAL);
-			run(sample.Act605,APPLICATION_TYPE_STARLING);
+			run(sample.Act501,APPLICATION_TYPE_STARLING);
 
 		}
 		
