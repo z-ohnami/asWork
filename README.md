@@ -1,7 +1,15 @@
-
-このトレーニングでできること
+このトレーニングをするとどうなるか
+Adobe AIRを使ってモバイルアプリケーションを開発することができるようになります。
+あと、AIRじゃないプラットフォームでも結局は似たようなことをやります。
+根底にあるものは使い回しが効くはずです。
 
 トレーニングの進め方
+目次に沿って、進めていってください(あせり禁物)。
+ソース内"work"配下にActxxx.asという名前でファイルを作り、Main.asにテストするファイル名を指定してデバッグしてください。
+"sample"というフォルダには各項目の例が記載されています。
+詰まったら
+ActionScript入門Wiki(http://www40.atwiki.jp/spellbound/)を覗いてみましょう。
+全くわからないと感じたら、sampleを写経してとにかく実行してみましょう。
 
 トレーニング 目次
 Stage0 環境の準備(この章は特に周囲の人に聞きながら進めるとよいです)
@@ -57,6 +65,11 @@ http://www.drk7.jp/weather/
 Act208 jsonファイルのデータ構造と同じプロパティを持つクラスを作り、Jsonで取得したデータをクラスに流しこんでみましょう。
 Act209 アプリケーション内に好きなWebサイトを表示させてみましょう。
 Act210 Act209でユーザーがリンクをクリックしたときに、URLをtrace文で表示させてみましょう。
+Act211 何かをタップしたら、指定したURLでブラウザを立ち上がるプログラムを書きましょう。
+
+Stage2.5 実機テスト
+Act251 AndroidまたはiOS端末でデバッグをしてみましょう。
+Act252 Androidの戻るボタンを無効にしてみましょう。
 
 Stage3 フレームワークを使う(Starling)
 (下準備)
@@ -121,7 +134,7 @@ ATFが如何に速いかを実感できるテストプログラムを書いて�
 インポート文の整理
 
 (参考になりそうなサイト)
-ActionScript入門Wiki
-Starling
-Feathers
+ActionScript入門Wiki http://www40.atwiki.jp/spellbound/
+Starling http://gamua.com/starling/
+Feathers http://feathersui.com/
 Tween24 http://package.a24.cat/tween24/

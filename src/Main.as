@@ -4,6 +4,7 @@ package
 	import flash.display.StageAlign;
 	import flash.display.StageScaleMode;
 	
+	//.* の書き方はトレーニング用です。実際のアプリを書くときは性能維持と、コード可能性維持のためにも控えましょう。
 	import sample.*;
 	import work.*;
 	
@@ -25,6 +26,19 @@ package
 			// autoOrients をサポート
 			stage.align = StageAlign.TOP_LEFT;
 			stage.scaleMode = StageScaleMode.NO_SCALE;
+
+			/*
+			 * ここでトレーニングで作成したクラスを指定します。
+			 * work.Actxxx < 自分が作成した課題を動かします。
+			 * sample.Actxxx < 課題の例を動かします。答え合わせや参考にどうぞ。
+			 * 
+			 * 引数は課題の内容に応じて変えてください。
+			 * 　素のFlashの場合　　　APPLICATION_TYPE_NORMAL
+			 * 　Starlingを使う場合　APPLICATION_TYPE_STARLING
+			 */
+			
+//			run(work.Act210,APPLICATION_TYPE_NORMAL);
+//			run(work.Act501,APPLICATION_TYPE_STARLING);
 
 			run(sample.Act210,APPLICATION_TYPE_NORMAL);
 //			run(sample.Act501,APPLICATION_TYPE_STARLING);
