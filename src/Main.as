@@ -17,7 +17,7 @@ package
 		private static const APPLICATION_TYPE_STARLING:int = 2;
 
 		private var _mStarling:Starling;
-		
+
 		public function Main()
 		{
 			super();
@@ -26,8 +26,8 @@ package
 			stage.align = StageAlign.TOP_LEFT;
 			stage.scaleMode = StageScaleMode.NO_SCALE;
 
-			run(sample.Act219,APPLICATION_TYPE_NORMAL);
-//			run(sample.Act4,APPLICATION_TYPE_STARLING);
+//			run(sample.Act219,APPLICATION_TYPE_NORMAL);
+			run(sample.Act605,APPLICATION_TYPE_STARLING);
 
 		}
 		
