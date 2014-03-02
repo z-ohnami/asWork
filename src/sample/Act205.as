@@ -10,9 +10,9 @@ package sample
 	import flash.net.URLVariables;
 	import flash.text.TextField;
 	
-	public class Act016 extends Sprite
+	public class Act205 extends Sprite
 	{
-		public function Act016()
+		public function Act205()
 		{
 			super();
 			addEventListener(Event.ADDED_TO_STAGE,initalize);

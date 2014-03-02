@@ -5,9 +5,9 @@ package sample
 	import flash.events.Event;
 	import flash.net.URLRequest;
 	
-	public class Act012 extends Sprite
+	public class Act201 extends Sprite
 	{		
-		public function Act012()
+		public function Act201()
 		{
 			super();
 			addEventListener(Event.ADDED_TO_STAGE,initalize);

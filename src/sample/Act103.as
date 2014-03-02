@@ -4,11 +4,11 @@ package sample
 	import flash.display.Sprite;
 	import flash.events.Event;
 	
-	public class Act003 extends Sprite
+	public class Act103 extends Sprite
 	{
 		private var _shape:Sprite;
 		
-		public function Act003()
+		public function Act103()
 		{
 			super();
 			addEventListener(Event.ADDED_TO_STAGE,initalize);

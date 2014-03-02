@@ -6,12 +6,12 @@ package sample
 	import flash.text.TextField;
 	import flash.utils.Timer;
 	
-	public class Act007 extends Sprite
+	public class Act107 extends Sprite
 	{		
 		private var _timeText:TextField;
 		private var _timer:Timer;
 		
-		public function Act007()
+		public function Act107()
 		{
 			super();
 			addEventListener(Event.ADDED_TO_STAGE,initalize);

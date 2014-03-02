@@ -4,10 +4,10 @@ package sample
 	import flash.events.Event;
 	import flash.text.TextField;
 	
-	public class Act006 extends Sprite
+	public class Act106 extends Sprite
 	{
 		
-		public function Act006()
+		public function Act106()
 		{
 			super();
 			addEventListener(Event.ADDED_TO_STAGE,initalize);

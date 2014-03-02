@@ -8,9 +8,9 @@ package sample
 	import flash.net.URLRequest;
 	import flash.text.TextField;
 	
-	public class Act018 extends Sprite
+	public class Act207 extends Sprite
 	{
-		public function Act018()
+		public function Act207()
 		{
 			super();
 			addEventListener(Event.ADDED_TO_STAGE,initalize);

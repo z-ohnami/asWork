@@ -4,9 +4,9 @@ package sample
 	import flash.events.Event;
 	import flash.text.TextField;
 	
-	public class Act001 extends Sprite
+	public class Act101 extends Sprite
 	{
-		public function Act001()
+		public function Act101()
 		{
 			super();
 			addEventListener(Event.ADDED_TO_STAGE,initalize);

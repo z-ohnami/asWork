@@ -6,11 +6,13 @@ package sample
 	import flash.net.URLLoader;
 	import flash.net.URLLoaderDataFormat;
 	import flash.net.URLRequest;
+	import flash.net.URLRequestMethod;
+	import flash.net.URLVariables;
 	import flash.text.TextField;
 	
-	public class Act017 extends Sprite
-	{
-		public function Act017()
+	public class Act204 extends Sprite
+	{		
+		public function Act204()
 		{
 			super();
 			addEventListener(Event.ADDED_TO_STAGE,initalize);
@@ -19,21 +21,28 @@ package sample
 		private function initalize(event:Event):void
 		{
 			removeEventListener(Event.ADDED_TO_STAGE,initalize);
-
-			var url:String = 'http://192.168.24.24/sample.json';
+			
+			var url:String = 'http://192.168.24.24/php/api.php';
+			
+			var postData:URLVariables = new URLVariables();
+			postData.select_id = 1;
+			
+			var request:URLRequest = new URLRequest(url);
+			request.method = URLRequestMethod.POST;
+			request.data = postData;
 			
 			var loader:URLLoader = new URLLoader();
 			loader.addEventListener(Event.COMPLETE,onLoaded);
 			loader.addEventListener(IOErrorEvent.IO_ERROR,onLoadError);
 			loader.dataFormat = URLLoaderDataFormat.TEXT;
-			loader.load(new URLRequest(url));
+			loader.load(request);
 		}
 
 		private function onLoaded(event:Event):void
 		{
 			var loader:URLLoader = event.currentTarget as URLLoader;
-			var data:String = loader.data as String;
-			parseJSON(data);
+			var text:String = loader.data as String;
+			showText(text);
 		}
 
 		private function onLoadError(event:IOErrorEvent):void
@@ -50,29 +59,5 @@ package sample
 			text.y = (stage.stageHeight - text.height) / 2;
 			addChild(text);
 		}
-		
-		private function parseJSON(jsonText:String):void
-		{
-			var jsonObj:Object = JSON.parse(jsonText);
-			
-			var text:TextField = new TextField();
-			text.text = buildText(jsonObj);
-			text.width = 200;
-			text.x = (stage.stageWidth - text.width) / 2;
-			text.y = (stage.stageHeight - text.height) / 2;
-			addChild(text);
-			
-		}		
-
-		private function buildText(jsonObj:Object):String
-		{
-			var name:String = (jsonObj.hasOwnProperty('name')) ? jsonObj.name : 'Unknown';
-			var age:String = (jsonObj.hasOwnProperty('age')) ? jsonObj.age : '10';
-			var hobby:String = (jsonObj.hasOwnProperty('hobby')) ? jsonObj.hobby : 'BaseBall';
-			var bloodType:String = (jsonObj.hasOwnProperty('bloodType')) ? jsonObj.bloodType : 'AAA';
-			
-			return name + ', ' + age + ', ' + hobby + ', ' + bloodType;
-		}
-		
 	}
 }

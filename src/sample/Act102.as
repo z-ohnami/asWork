@@ -4,9 +4,9 @@ package sample
 	import flash.display.Sprite;
 	import flash.events.Event;
 	
-	public class Act002 extends Sprite
+	public class Act102 extends Sprite
 	{
-		public function Act002()
+		public function Act102()
 		{
 			super();
 			addEventListener(Event.ADDED_TO_STAGE,initalize);

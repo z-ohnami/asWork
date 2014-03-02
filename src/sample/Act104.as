@@ -4,7 +4,7 @@ package sample
 	import flash.display.Sprite;
 	import flash.events.Event;
 	
-	public class Act005 extends Sprite
+	public class Act104 extends Sprite
 	{
 		
 		[Embed(source = '/img/hana.jpg', mimeType='image/jpeg')]
@@ -13,7 +13,7 @@ package sample
 		[Embed(source = '/img/daruma.jpg', mimeType='image/jpeg')]
 		private var ImageDaruma:Class;
 		
-		public function Act005()
+		public function Act104()
 		{
 			super();
 			addEventListener(Event.ADDED_TO_STAGE,initalize);
@@ -28,14 +28,10 @@ package sample
 		private function addImage():void
 		{
 			var bmpHana:Bitmap = new ImageHana() as Bitmap;
-			bmpHana.scaleX = 3;
-			bmpHana.scaleY = 3;
 			addChild(bmpHana);
 
 			var bmpDaruma:Bitmap = new ImageDaruma() as Bitmap;
 			bmpDaruma.y = bmpHana.height;
-			bmpDaruma.x = bmpDaruma.height;
-			bmpDaruma.rotation = 90;
 			addChild(bmpDaruma);
 		}
 		

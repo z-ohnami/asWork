@@ -3,19 +3,31 @@ package sample
 	import flash.display.Shape;
 	import flash.display.Sprite;
 	import flash.events.Event;
+	import flash.events.DataEvent;
+	import flash.events.MouseEvent;
 	import flash.events.TimerEvent;
 	import flash.utils.Timer;
 	
-	public class Act010 extends Sprite
+	public class Act111 extends Sprite
 	{
 		private var _shape:Shikaku = null;
 		private var timer:Timer;
+		private var _currentColorPos:int = -1;
+		private var _colorGroupLength:int = 0;
 		
-		public function Act010()
+		private var _colorGroup:Array = [
+			0xFF0000,
+			0x00FF00,
+			0x0000FF
+		];
+		
+		public function Act111()
 		{
 			super();
 			addEventListener(Event.ADDED_TO_STAGE, initalize);
 
+			_colorGroupLength = _colorGroup.length;
+			
 			timer = new Timer(2000);
 			timer.addEventListener(TimerEvent.TIMER, onTimer);
 			timer.start();
@@ -26,7 +38,7 @@ package sample
 			trace('application initialized.');
 			removeEventListener(Event.ADDED_TO_STAGE,initalize);
 			stage.color = 0x000000;
-			drawRect(0x00FF00);
+			drawRect(getShapeColor());
 		}
 
 		private function drawRect(color:uint):void
@@ -40,14 +52,25 @@ package sample
 		private function onTimer(TimerEvent:Event):void
 		{
 			if (_shape)
-				_shape.dispatchEvent(new Event(Shikaku.EVENT_MOVE));
+				_shape.dispatchEvent(new DataEvent(Shikaku.EVENT_MOVE,false,false,String(getShapeColor())));
 		}
 
+		private function getShapeColor():uint
+		{
+			if (_currentColorPos >= 0 && _currentColorPos < (_colorGroupLength - 1))
+				_currentColorPos += 1;
+			else
+				_currentColorPos = 0;
+				
+			return _colorGroup[_currentColorPos];
+		}
+		
 	}	
 }
 
 import flash.display.Shape;
 import flash.events.Event;
+import flash.events.DataEvent;
 
 internal class Shikaku extends Shape
 {
@@ -64,20 +87,29 @@ internal class Shikaku extends Shape
 	
 	private function initialize(event:Event):void
 	{
-		graphics.beginFill(_color);
-		graphics.drawRect(0,0,100,100);
-		graphics.endFill();
+		changeColor(_color);
 	}
 	
-	private function onMove(Event:Event):void
+	private function onMove(event:DataEvent):void
 	{
 		trace('event accepted.');
 		move();
+		changeColor(uint(event.data));
 	}
 	
 	private function move():void
 	{
 		x += 10;
 		y += 10;
+	}
+	
+	private function changeColor(color:uint):void
+	{
+		_color = color;
+		graphics.clear();
+		graphics.beginFill(color);
+		graphics.drawRect(0,0,100,100);
+		graphics.endFill();
+		trace('color changed !! ' + color);		
 	}
 }
