@@ -24,6 +24,10 @@ package sample
 //			var url:String = 'http://192.168.24.24/php/api.php';
 			
 			var loader:URLLoader = new URLLoader();
+
+			//↓これは使わない方がいい。対象のファイルが無い時にTryCatchが効かない
+//			loader.dataFormat = URLLoaderDataFormat.VARIABLES;
+
 			loader.addEventListener(Event.COMPLETE,onLoaded);
 			loader.addEventListener(IOErrorEvent.IO_ERROR,onLoadError);
 			loader.dataFormat = URLLoaderDataFormat.TEXT;
