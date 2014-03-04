@@ -40,8 +40,8 @@ package
 //			run(work.Act210,APPLICATION_TYPE_NORMAL);
 //			run(work.Act501,APPLICATION_TYPE_STARLING);
 
-			run(sample.Act211,APPLICATION_TYPE_NORMAL);
-//			run(sample.Act501,APPLICATION_TYPE_STARLING);
+//			run(sample.Act210,APPLICATION_TYPE_NORMAL);
+			run(sample.Act501,APPLICATION_TYPE_STARLING);
 
 		}
 		
