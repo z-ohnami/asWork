@@ -13,17 +13,21 @@ package sample
 		public function Act203()
 		{
 			super();
-			addEventListener(Event.ADDED_TO_STAGE,initalize);
+			addEventListener(Event.ADDED_TO_STAGE,init);
 		}
 		
-		private function initalize(event:Event):void
+		private function init(event:Event):void
 		{
-			removeEventListener(Event.ADDED_TO_STAGE,initalize);
+			removeEventListener(Event.ADDED_TO_STAGE,init);
 
 			var url:String = 'http://192.168.24.24/php/api.ph';
 //			var url:String = 'http://192.168.24.24/php/api.php';
 			
 			var loader:URLLoader = new URLLoader();
+
+			//↓これは使わない方がいい。対象のファイルが無い時にTryCatchが効かない
+//			loader.dataFormat = URLLoaderDataFormat.VARIABLES;
+
 			loader.addEventListener(Event.COMPLETE,onLoaded);
 			loader.addEventListener(IOErrorEvent.IO_ERROR,onLoadError);
 			loader.dataFormat = URLLoaderDataFormat.TEXT;

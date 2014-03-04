@@ -24,7 +24,7 @@ package sample
 		public function Act111()
 		{
 			super();
-			addEventListener(Event.ADDED_TO_STAGE, initalize);
+			addEventListener(Event.ADDED_TO_STAGE, init);
 
 			_colorGroupLength = _colorGroup.length;
 			
@@ -33,10 +33,10 @@ package sample
 			timer.start();
 		}
 		
-		private function initalize(event:Event):void
+		private function init(event:Event):void
 		{
 			trace('application initialized.');
-			removeEventListener(Event.ADDED_TO_STAGE,initalize);
+			removeEventListener(Event.ADDED_TO_STAGE,init);
 			stage.color = 0x000000;
 			drawRect(getShapeColor());
 		}
