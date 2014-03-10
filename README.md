@@ -93,15 +93,16 @@ Adobe GamingSDKの最新版をダウンロードしておいてください。
 ####Act301 Starlingを使って Act001をやってみましょう。
 ####Act302 Starlingを使って Act003をやりましょう。
 ####Act303 Starlingの機能でAct004同様に画像を読み込んでみましょう
-####Act304 img/sprite1.pngとimg/sprite1.xmlを読み込んで各画像パーツごとに画面に表示させてみましょう。
-####Act305 png画像からatf画像を作り、それをStarlingから表示させてみましょう。
+####Act304 口以下のサンプル画像とXMLを使って火を吹いている画像のみを切り出して表示させてみましょう。
+サンプル画像とXML > img/character_sample.pngとimg/character_sample.xml
+####Act305 Act304のキャラをタップしたら、別の表情のキャラにランダムで置き換わるように変えましょう。
+####Act306 png画像からatf画像を作り、それをStarlingから表示させてみましょう。
 まずはAdobeから最新のGaming SDKをダウンロードしてみて png2atfコマンドを入手しましょう。
 また、作ったatf画像はATFViewerで中を覗いてみましょう。
-
-####Act306 ENTER_FRAMEイベントを使う
+####Act307 ENTER_FRAMEイベントを使う
 ENTER_FRAMEを使い図形や画像が画面の中心を基準にして円運動をするプログラムを書きましょう。
 そして、Starlingのfps設定を調整すると動きがどのように変わるか確認してみましょう。
-####Act307 について円運動しつつ、自身も回転するプログラムを書きましょう。
+####Act308 について円運動しつつ、自身も回転するプログラムを書きましょう。
 ただし、回転の軸は中心にしましょう。
 
 ###Stage4 スプライトシート
